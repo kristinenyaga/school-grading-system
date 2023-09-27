@@ -6,7 +6,6 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('grades', '0002_alter_grades_biology_alter_grades_chemistry_and_more'),
         ('grades', '0002_grade_delete_grades'),
     ]
 
