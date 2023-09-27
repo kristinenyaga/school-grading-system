@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-
+from students.models import Student
+from terms.models import Term
 def validate_value(value):
    if value > 100:
         raise ValidationError('Value must be less than or equal to 100')
@@ -18,8 +19,10 @@ class Grade(models.Model):
   history= models.PositiveIntegerField(validators=[validate_value])
   geography= models.PositiveIntegerField(validators=[validate_value])
   cre= models.PositiveIntegerField(validators=[validate_value])
+  studentadmno = models.ForeignKey(Student, on_delete=models.CASCADE)
+  termId=models.ForeignKey(Term, on_delete=models.CASCADE)
 
   class Meta:
     ordering = ['gradeId']
   def __str__(self) -> str:
-     return self.grade
+     return self.studentadmno

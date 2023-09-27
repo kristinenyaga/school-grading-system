@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'teachers',
     'classes',
     'grades',
+    'terms',
     
 
 ]
@@ -81,8 +82,11 @@ WSGI_APPLICATION = 'gradingsystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'gradingsystem',
+        'HOST':'localhost',
+        'USER':'root',
+        'PASSWORD':'rootkristine'
     }
 }
 
