@@ -6,7 +6,7 @@ def validate_value(value):
         raise ValidationError('Value must be less than or equal to 100')
 
 # Create your models here.
-class Grades(models.Model):
+class Grade(models.Model):
   gradeId = models.IntegerField(primary_key=True)
   examType= models.CharField(max_length=55)
   maths= models.PositiveIntegerField(validators=[validate_value])
@@ -22,4 +22,4 @@ class Grades(models.Model):
   class Meta:
     ordering = ['gradeId']
   def __str__(self) -> str:
-     return self.grades
+     return self.grade
