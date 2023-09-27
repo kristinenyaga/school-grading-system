@@ -86,7 +86,7 @@ DATABASES = {
         'NAME':'gradingsystem',
         'HOST':'localhost',
         'USER':'root',
-        'PASSWORD':'rootkristine'
+        'PASSWORD':'Mwise2002'
     }
 }
 
