@@ -22,4 +22,4 @@ class Student(models.Model):
         ordering = ['studentadmno']
 
     def __str__(self) -> str:
-        return self.student
+        return self.first_name
