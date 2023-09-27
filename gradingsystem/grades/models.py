@@ -10,7 +10,7 @@ class Grades(models.Model):
   gradeId = models.IntegerField(primary_key=True)
   examType= models.CharField(max_length=55)
   maths= models.PositiveIntegerField(max_length=100,validators=[validate_value])
-  english= models.PositiveIntegerField(max_length=100,validators=[validate_value]
+  english= models.PositiveIntegerField(max_length=100,validators=[validate_value])
   kiswahili= models.PositiveIntegerField(max_length=100,validators=[validate_value])
   physics= models.PositiveIntegerField(max_length=100,validators=[validate_value])
   biology= models.PositiveIntegerField(max_length=100,validators=[validate_value])
