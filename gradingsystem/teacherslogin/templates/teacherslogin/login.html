@@ -1,0 +1,20 @@
+{% block content %}
+
+<form method="POST" novalidate>
+  {% csrf_token %}
+  <h2>Login</h2>
+  <p>Welcome back! Please login to your account</p>
+  <div class="login_details">
+    <div class="username">
+      <label for="{{ form.username.id_for_label }}">Email</label><br />
+      {{ form.username }}
+    </div>
+    <div class="password">
+      <label for="{{ form.password.id_for_label }}">Password</label><br />
+      {{ form.password }}
+    </div>
+  </div>
+  <input type="submit" value="Login" />
+</form>
+
+{% endblock content %}

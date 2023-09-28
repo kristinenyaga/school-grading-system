@@ -14,7 +14,7 @@ class Student(models.Model):
     guardian_telephone = models.CharField(max_length=255, null=False)
     guardian_email = models.CharField(max_length=255, null=False)
     guardian_name = models.CharField(max_length=255, null=False)
-    password = models.CharField(max_length=255)
+    password = models.CharField(max_length=255, null=False)
     class_id = models.ForeignKey(Class, on_delete=models.CASCADE)
 
     class Meta:
